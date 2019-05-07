@@ -63,3 +63,86 @@ Group By City Order by NumberOfOrder asc
 ## delete all users that have no orders. Should delete 17 (or 18 if you haven't deleted the record added) records.
 
 DELETE FROM Customers WHERE CustomerID not in (select CustomerID from orders)
+
+// SELECT City, CustomerName, ContactName 
+
+// from Customers
+// WHERE City= 'Berlin'
+//--------------------------
+//your can use and / or statements in the where field
+
+// SELECT City, CustomerName, ContactName 
+
+// from Customers
+// WHERE Country = "France" and City ="Paris"
+
+//----------------------
+//write a query to get the list of products with category id of 2
+
+// SELECT * from products WHERE CategoryID = 2
+
+//-----------------------
+
+// slect by price
+
+//SELECT * FROM Products order by Price
+
+//---------------------
+// slect by price in descending order
+
+//SELECT * FROM Products order by Price desc
+
+//-------------------------------------
+// write a query to get the list of products that cost more than 50 organized by price desc
+
+// SELECT * 
+// FROM Products 
+// WHERE Price > 50
+// ORDER BY price desc
+
+//-----------------------
+//count the rows of orderdetails
+
+// SELECT count(*) from OrderDetails
+
+//---------------------------
+// add an alias
+
+// SELECT count(*) as Banana
+// From OrderDetails
+
+// SELECT CustomerName as Name, 
+// ContactName as Contact, 
+// length(CustomerName) as NameLength
+// From Customers
+
+//------------------------------------
+//get unique records back
+
+// SELECT DISTINCT City
+// From Customers
+
+
+//------------------WildCards
+// find the firs tname that starts with a J and follow with an n
+
+// SELECT * From Employees 
+// Where FirstName like 'J_n%'
+
+// slected distinct(no dublicats) city that has an ar somewhere in the middle and put in alphabetical order. you can add desc to make order decent after City on last line
+
+// SELECT DISTINCT City
+// FROM Customers
+// WHERE City like '%ar%'
+// ORDER by City
+
+// find emplyess who have notes that inlude sales ordered by last name Ascending
+// SELECT * FROM Employees
+// WHERE Notes like '%sales%'
+// ORDER BY LastName ASC
+
+// select cities that dont have %ar% in their name with the "NOT" operation
+// SELECT DISTINCT City
+// FROM Customers
+// WHERE City NOT like '%ar%'
+// Order By City
