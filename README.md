@@ -15,7 +15,7 @@ For this lab you will:
 - install [`SQLite Studio`](https://sqlitestudio.pl/index.rvt) and use it to create a database.
 - using `SQLite Studio` add a table to the database you just created.
 
-### Write Basic Queries
+### Write Basic Queries -Pats ReadMe
 
 Visit [SQL Try Editor at W3Schools.com](https://www.w3schools.com/Sql/tryit.asp?filename=trysql_select_top) using the **Google Chrome (or Chromium if you use Linux) browser** and write _SQL queries_ for the following requirements:
 
